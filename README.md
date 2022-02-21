@@ -13,3 +13,9 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+## Run
+
+`npx hardhat node`
+
+`npx hardhat run scripts/allow-list.js --network localhost`
