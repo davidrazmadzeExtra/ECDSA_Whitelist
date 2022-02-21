@@ -15,8 +15,14 @@ const main = async () => {
   const privateKey =
     "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
 
+  // ✅ Wallet address of the owner should be printed
   const signer = new ethers.Wallet(privateKey);
   console.log(signer.address);
+
+  // Sign a message and see the result of the signed message
+  const message = "Hello World!";
+  const signature = await signer.signMessage(message);
+  console.log(signature);
 };
 
 const runMain = async () => {
