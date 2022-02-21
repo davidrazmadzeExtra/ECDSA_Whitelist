@@ -19,3 +19,9 @@ npx hardhat help
 `npx hardhat node`
 
 `npx hardhat run scripts/allow-list.js --network localhost`
+
+## Resources
+
+https://dev.to/rounakbanik/tutorial-digital-signatures-nft-allowlists-eeb
+
+https://github.com/rounakbanik/nft-collectible-contract/blob/master/contracts/NFTCollectible.sol
