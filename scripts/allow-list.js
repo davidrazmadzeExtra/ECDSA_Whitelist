@@ -37,6 +37,20 @@ const main = async () => {
   const messageBytes = ethers.utils.arrayify(messageHash);
   const signature = await signer.signMessage(messageBytes);
   console.log("Signature: ", signature);
+
+  
+  // Deploy contract
+
+  const nftContractFactory = await hre.ethers.getContractFactory(
+    "Greeter"
+  );
+  const nftContract = await nftContractFactory.deploy("ipfs://your-cide-code");
+
+  await nftContract.deployed();
+
+  console.log("Contract deployed by: ", signer.address);
+  recover = await nftContract.recoverSigner(messageHash, signature);
+  console.log("Message was signed by: ", recover.toString());
 };
 
 const runMain = async () => {
