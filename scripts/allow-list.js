@@ -20,9 +20,23 @@ const main = async () => {
   console.log(signer.address);
 
   // Sign a message and see the result of the signed message
-  const message = "Hello World!";
-  const signature = await signer.signMessage(message);
-  console.log(signature);
+  // const message = "Hello World!";
+  // const signature = await signer.signMessage(message);
+  // console.log(signature);
+
+  // * * * * * * * * * * * * * * * //
+
+  // Get first allowlisted address
+  const message = allowlistedAddresses[0];
+
+  // Compute hash of the address
+  const messageHash = ethers.utils.id(message);
+  console.log("Message Hash: ", messageHash);
+
+  // Sign the hashed address
+  const messageBytes = ethers.utils.arrayify(messageHash);
+  const signature = await signer.signMessage(messageBytes);
+  console.log("Signature: ", signature);
 };
 
 const runMain = async () => {
