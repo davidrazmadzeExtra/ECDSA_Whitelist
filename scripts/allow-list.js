@@ -1,7 +1,7 @@
 const ethers = require("ethers");
 
 const main = async () => {
-  // Accounts #1-#5
+  // Accounts #1 - - - - #5
   const allowlistedAddresses = [
     "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
     "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
@@ -10,7 +10,7 @@ const main = async () => {
     "0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc",
   ];
 
-  // Owner - account #0
+  // Owner - Account #0
   const owner = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266";
   const privateKey =
     "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
